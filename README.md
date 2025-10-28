@@ -67,5 +67,44 @@ E-Leraning-Application/
 
 
 
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 195841" src="https://github.com/user-attachments/assets/5fde313d-410f-45c6-8810-ffec1c3868fd" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 195859" src="https://github.com/user-attachments/assets/dd474d4b-3381-4b63-8df7-392f3b0cb0b1" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 195932" src="https://github.com/user-attachments/assets/ce26d687-0f27-490b-8916-1f969d06f188" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 195945" src="https://github.com/user-attachments/assets/4fab8c2c-f2f6-4101-a4db-7ee9bc032bf9" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200013" src="https://github.com/user-attachments/assets/5cdce180-8e45-4c82-ac13-5b956db248c2" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200026" src="https://github.com/user-attachments/assets/fa35b2d6-4fbd-46f8-ad90-d3c189810844" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200040" src="https://github.com/user-attachments/assets/8e6fa5f7-e1d3-4886-b016-da6eeba4895b" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200124" src="https://github.com/user-attachments/assets/6f2625c1-4fd5-44b6-b9e9-77f734e24f6f" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200136" src="https://github.com/user-attachments/assets/865acf6a-e690-4508-b85f-d5dd7ca4ed96" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200149" src="https://github.com/user-attachments/assets/597a635d-d6bd-4858-ad3d-0f1e7afecc56" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200230" src="https://github.com/user-attachments/assets/54da7358-5628-44aa-93cb-1b7c447c0d88" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200245" src="https://github.com/user-attachments/assets/b8e48e7e-cc7a-4e47-999a-34ad28dd7490" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200300" src="https://github.com/user-attachments/assets/4e7aef89-cf4c-4af6-b22f-f69740df151c" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 200312" src="https://github.com/user-attachments/assets/7513f09e-a069-480c-af94-3654ff07ce63" />
+
+
+
+
+
+
+
+
+
+
+
+
 
 

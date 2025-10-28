@@ -1,0 +1,158 @@
+﻿@page
+@model E_Leraning_Application.Pages.Instructor.DashboardModel
+@{
+    ViewData["Title"] = "Instructor Dashboard";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<style>
+    .sidebar {
+        height: 100vh;
+        background-color: #f7941d;
+        color: white;
+        padding-top: 1.5rem;
+        position: fixed;
+        width: 220px;
+    }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+            .sidebar a:hover {
+                background-color: #e67e00;
+                color: white;
+            }
+
+    .content {
+        margin-left: 230px;
+        padding: 2rem;
+    }
+
+    .custom-card {
+        display: flex;
+        background-color: #f8f9fa;
+        border-radius: 14px;
+        overflow: hidden;
+        transition: 0.3s ease;
+        border: 1px solid #e0e0e0;
+        min-height: 150px;
+        padding: 1rem;
+    }
+
+        .custom-card:hover {
+            transform: scale(1.015);
+            background-color: #eaf4ff;
+        }
+
+    .icon-box {
+        width: 100px;
+        height: 100px;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: white;
+        margin-right: 1rem;
+        border-radius: 12px;
+    }
+
+    .card-body-custom {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bg-blue {
+        background-color: #007bff;
+    }
+
+    .bg-red {
+        background-color: #dc3545;
+    }
+
+    .bg-teal {
+        background-color: #17a2b8;
+    }
+
+    .bg-purple {
+        background-color: #6f42c1;
+    }
+</style>
+
+<div class="sidebar">
+    <h4 class="text-center">🎓 NovaLearn</h4>
+    <a href="/Instructor/AddCourse"><i class="fas fa-plus"></i> Add Course</a>
+    <a href="/Instructor/AddLesson"><i class="fas fa-book"></i> Add Lessons</a>
+    <a href="/Instructor/MyLearning"><i class="fas fa-graduation-cap"></i> My Learning</a>
+    <a href="/Instructor/CourseList"><i class="fas fa-list"></i> Course List</a>
+    <a href="/Instructor/Wishlist"><i class="fas fa-heart"></i> My Wishlist</a>
+    <a href="/Instructor/EditProfile"><i class="fas fa-user-edit"></i> Edit Profile</a>
+    <a href="/Instructor/Learners"><i class="fas fa-users"></i> Learners</a>
+    <a href="/Instructor/Lessons"><i class="fas fa-book-reader"></i> Lessons</a>
+</div>
+
+<div class="content">
+    <h2 class="fw-bold text-danger">Professor Dashboard</h2>
+    <div class="row mb-4">
+
+        <!-- Courses Card -->
+        <div class="col-md-6 mb-4">
+            <a href="/Instructor/CourseList" class="text-decoration-none">
+                <div class="custom-card shadow-sm">
+                    <div class="icon-box bg-blue"><i class="fas fa-trophy"></i></div>
+                    <div class="card-body-custom">
+                        <h5 class="fw-bold text-dark">Courses</h5>
+                        <p class="text-muted mb-0">@Model.TotalCourses courses available</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Learners Card -->
+        <div class="col-md-6 mb-4">
+            <a href="/Instructor/Learners" class="text-decoration-none">
+                <div class="custom-card shadow-sm">
+                    <div class="icon-box bg-red"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="card-body-custom">
+                        <h5 class="fw-bold text-dark">Learners</h5>
+                        <p class="text-muted mb-0">@Model.TotalLearners learners have enrolled</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Lessons Card -->
+        <div class="col-md-6 mb-4">
+            <a href="/Instructor/Lessons" class="text-decoration-none">
+                <div class="custom-card shadow-sm">
+                    <div class="icon-box bg-teal"><i class="fas fa-bars"></i></div>
+                    <div class="card-body-custom">
+                        <h5 class="fw-bold text-dark">Lessons</h5>
+                        <p class="text-muted mb-0">@Model.TotalChapters lessons across @Model.TotalCourses courses</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Favourites Card -->
+        <div class="col-md-6 mb-4">
+            <a href="/Instructor/Favourites" class="text-decoration-none">
+                <div class="custom-card shadow-sm">
+                    <div class="icon-box bg-purple"><i class="fas fa-heart"></i></div>
+                    <div class="card-body-custom">
+                        <h5 class="fw-bold text-dark">Favourites</h5>
+                        <p class="text-muted mb-0">Most loved: @Model.MostLovedCourseTitle</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>

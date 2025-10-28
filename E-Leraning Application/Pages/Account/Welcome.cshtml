@@ -1,0 +1,50 @@
+﻿@page
+@model E_Leraning_Application.Pages.Account.WelcomeModel
+@{
+    ViewData["Title"] = "Welcome";
+    Layout = "_Layout";
+}
+
+<!-- Header Section -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Welcome to <span style="color:#f7941d;">NovaLearn</span></h1>
+        <p class="lead">Choose your role to begin your learning journey</p>
+    </div>
+
+    <!-- Role Cards -->
+    <div class="row justify-content-center g-4">
+        <!-- Student Card -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="~/images/student.jpg" class="card-img-top" alt="Student" style="height: 250px; object-fit: cover;" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Register as Student</h5>
+                    <a href="/Account/Register?role=Student" class="btn btn-outline-dark w-100">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructor Card -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="~/images/instructor.jpg" class="card-img-top" alt="Instructor" style="height: 250px; object-fit: cover;" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Register as Instructor</h5>
+                    <a href="/Account/Register?role=Instructor" class="btn btn-outline-dark w-100">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Card -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="~/images/admin.jpg" class="card-img-top" alt="Admin" style="height: 250px; object-fit: cover;" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Register as Admin</h5>
+                    <a href="/Account/Register?role=Admin" class="btn btn-outline-dark w-100">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

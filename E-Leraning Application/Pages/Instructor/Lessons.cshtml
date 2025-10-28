@@ -1,0 +1,78 @@
+﻿@page
+@model E_Leraning_Application.Pages.Instructor.LessonsModel
+@{
+    ViewData["Title"] = "My Lessons";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+<style>
+    body {
+        background-color: #fff4e6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+        color: #f7941d;
+        font-weight: bold;
+    }
+
+    .card {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-header {
+        background-color: #f7941d;
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .list-group-item {
+        background-color: #fffdf7;
+        border: none;
+        border-bottom: 1px solid #f5d6a1;
+        font-size: 0.95rem;
+    }
+
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+
+    .alert {
+        background-color: #ffe5cc;
+        border-left: 5px solid #f7941d;
+        color: #333;
+    }
+</style>
+
+<div class="container py-4">
+    <h2 class="text-center mb-4">📚 Lessons by Course</h2>
+
+    @if (Model.CourseLessons != null && Model.CourseLessons.Any())
+    {
+        foreach (var courseGroup in Model.CourseLessons)
+        {
+            <div class="card mb-4">
+                <div class="card-header">
+                    @courseGroup.Key
+                </div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var lesson in courseGroup.Value)
+                    {
+                        <li class="list-group-item">
+                            <strong>@lesson.Title</strong><br />
+                            <span class="text-muted">@lesson.Content</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="alert alert-info text-center">No lessons found for your courses yet.</div>
+    }
+</div>

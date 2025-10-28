@@ -1,0 +1,44 @@
+﻿@page
+@model E_Leraning_Application.Pages.Account.InstructorRegisterModel
+@{
+    ViewData["Title"] = "Instructor Registration";
+    Layout = "_Layout";
+}
+
+<section class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Become an <span style="color:#f7941d;">Instructor</span></h2>
+        <p class="text-muted">Create your account to share knowledge on NovaLearn</p>
+    </div>
+
+    <div class="w-50 mx-auto bg-light p-4 rounded shadow-sm">
+        @if (Model.ErrorMessage != null)
+        {
+            <div class="alert alert-danger text-center">@Model.ErrorMessage</div>
+        }
+
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="FullName" class="form-label">Full Name</label>
+                <input asp-for="FullName" class="form-control" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input asp-for="Email" type="email" class="form-control" placeholder="Enter your email" required />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Create a password" required />
+            </div>
+
+            <button type="submit" class="btn btn-outline-dark w-100">Register as Instructor</button>
+
+            <div class="text-center mt-3">
+                Already have an account?
+                <a asp-page="/Account/Login" class="text-decoration-none">Login</a>
+            </div>
+        </form>
+    </div>
+</section>

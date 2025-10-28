@@ -1,0 +1,86 @@
+﻿@page
+@model E_Leraning_Application.Pages.Instructor.CourseListModel
+@{
+    ViewData["Title"] = "My Courses";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+<style>
+    .course-heading {
+        text-align: center;
+        margin: 30px 0;
+        font-weight: bold;
+        color: #f7941d;
+    }
+
+    .course-card {
+        border: 1px solid #ffa94d;
+        border-radius: 14px;
+        background-color: #fff4e6;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff1db;
+        }
+
+    .btn-view {
+        border: 1px solid black;
+        color: black;
+        background-color: transparent;
+        font-weight: 500;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .btn-view:hover {
+            background-color: #333;
+            color: white;
+        }
+
+    .card-title {
+        font-weight: 600;
+        color: #d35400;
+    }
+
+    .card-text {
+        color: #555;
+    }
+</style>
+
+<div class="container mt-4">
+    <h2 class="course-heading">📘 My Created Courses</h2>
+
+    @if (Model.Courses.Any())
+    {
+        <div class="row">
+            @foreach (var course in Model.Courses)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="card course-card">
+                        <div class="card-body">
+                            <h5 class="card-title">@course.Title</h5>
+                            <p class="card-text">
+                                @(!string.IsNullOrEmpty(course.Description)
+                                                        ? (course.Description.Length > 100
+                                                        ? course.Description.Substring(0, 100) + "..."
+                                                        : course.Description)
+                                                        : "No description provided.")
+                    </p>
+                    <p class="mb-3"><strong>Lessons:</strong> @(course.Lessons?.Count ?? 0)</p>
+                    <a class="btn btn-view btn-sm" href="/Instructor/ViewCourse/@course.Id">View Details</a>
+                </div>
+            </div>
+        </div>
+                }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">No courses created yet.</div>
+    }
+</div>

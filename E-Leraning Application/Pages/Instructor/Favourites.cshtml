@@ -1,0 +1,76 @@
+﻿@page
+@model E_Leraning_Application.Pages.Instructor.FavouritesModel
+@{
+    ViewData["Title"] = "❤️ Most Loved Course";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+<style>
+    body {
+        background-color: #fff4e6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+        color: #f7941d;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    .card {
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        background-color: #fff;
+    }
+
+    .card-title {
+        color: #f7941d;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .list-group-item {
+        background-color: #fffdf7;
+        border: none;
+        border-bottom: 1px solid #f5d6a1;
+    }
+
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+
+    .alert {
+        background-color: #ffe5cc;
+        border-left: 5px solid #f7941d;
+        color: #333;
+    }
+</style>
+
+<div class="container py-5">
+    <h2 class="text-center">❤️ Most Loved Course</h2>
+
+    @if (Model.MostLovedCourse != null)
+    {
+        <div class="card mx-auto p-4" style="max-width: 700px;">
+            <div class="card-body">
+                <h4 class="card-title">@Model.MostLovedCourse.Title</h4>
+                <p class="card-text"><strong>Enrollments:</strong> @Model.EnrollmentCount</p>
+
+                <h5 class="mt-4 mb-3" style="color: #f7941d;">Enrolled Students</h5>
+                <ul class="list-group">
+                    @foreach (var student in Model.EnrolledStudents)
+                    {
+                        <li class="list-group-item">
+                            @student.FullName (@student.Email)
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center">No enrollments found for your courses.</div>
+    }
+</div>

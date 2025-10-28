@@ -1,0 +1,91 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+<!-- Hero Section -->
+<section class="py-5" style="background: linear-gradient(to right, #fff4e6 0%, #ffffff 100%); min-height: 100vh;">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Text -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1 class="display-4 fw-bold mb-3">
+                    Welcome to <span style="color: #f7941d;">NovaLearn</span>
+                </h1>
+                <p class="lead text-muted">
+                    Curated eLearning platform for students to learn from the best, at their own pace.
+                </p>
+                <a href="/Register" class="btn btn-lg mt-4" style="background-color: #f7941d; color: white; border-radius: 8px;">
+                    🚀 Get Started
+                </a>
+            </div>
+
+            <!-- Right Image with Styled Background -->
+            <div class="col-lg-6 text-center">
+                <div class="position-relative d-inline-block p-3 bg-white rounded-4 shadow-lg" style="max-width: 100%; border: 1px solid #f1f1f1;">
+                    <img src="~/images/home.jpg" alt="eLearning" class="img-fluid rounded-3" style="max-height: 550px;" />
+                    <!-- Decorative Circles -->
+                    <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background-color: #f7941d; border-radius: 50%; z-index: -1;"></div>
+                    <div style="position: absolute; bottom: -30px; left: -30px; width: 80px; height: 80px; background-color: #fff4e6; border-radius: 50%; z-index: -1;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Spacer -->
+<div class="my-5"></div>
+
+<!-- Why Choose Us Section -->
+<section id="about" class="py-5" style="background-color: #f9f4fc;">
+    <div class="container text-center">
+        <h2 class="mb-5 fw-semibold" style="color: #6f42c1;">Why Choose Us?</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card h-100 shadow border-0 rounded-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-laptop-fill fs-1 text-warning"></i>
+                        </div>
+                        <h5 class="card-title text-primary fw-semibold">Flexible Learning</h5>
+                        <p class="card-text text-muted">Access courses anytime, anywhere, and at your own pace.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 shadow border-0 rounded-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-award-fill fs-1 text-warning"></i>
+                        </div>
+                        <h5 class="card-title text-primary fw-semibold">Certified Courses</h5>
+                        <p class="card-text text-muted">Earn industry-recognized certifications on course completion.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 shadow border-0 rounded-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-person-video2 fs-1 text-warning"></i>
+                        </div>
+                        <h5 class="card-title text-primary fw-semibold">Expert Mentors</h5>
+                        <p class="card-text text-muted">Gain insights from professionals with real-world experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 shadow border-0 rounded-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-people-fill fs-1 text-warning"></i>
+                        </div>
+                        <h5 class="card-title text-primary fw-semibold">Student Community</h5>
+                        <p class="card-text text-muted">Collaborate and grow within an active learner community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

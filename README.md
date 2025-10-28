@@ -64,3 +64,8 @@ E-Leraning-Application/
 - Soft background (#fff4e6) for better readability
 - Responsive layout using Bootstrap
 - Student & instructor dashboards with course cards
+
+
+
+
+

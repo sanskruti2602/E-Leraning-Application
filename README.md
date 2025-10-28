@@ -66,6 +66,7 @@ E-Leraning-Application/
 - Student & instructor dashboards with course cards
 
 
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 195841" src="https://github.com/user-attachments/assets/7a6a5597-a0fc-48cb-b38e-6f40be7a228e" />
 
 
 

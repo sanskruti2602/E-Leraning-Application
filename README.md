@@ -94,6 +94,8 @@ E-Leraning-Application/
 
 <img width="1920" height="1080" alt="Screenshot 2025-10-28 200312" src="https://github.com/user-attachments/assets/9d0ee54d-ea0d-41b5-97bd-83444d88b0d7" />
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/32506d92-4e40-4ba0-99c3-4c789ed6adfb" />
+
 
 
 
